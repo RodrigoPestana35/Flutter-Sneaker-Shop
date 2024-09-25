@@ -5,6 +5,69 @@ class IntroPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            children: [
+              //logo
+              Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Image.asset(
+                  'lib/images/vecteezy_nike-transparent-png-nike-free-png_19956200.png',
+                  height: 240,
+                ),
+              ),
+              const SizedBox(
+                height: 48,
+              ),
+              //title
+              const Text(
+                "Just Do It",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(
+                height: 48,
+              ),
+
+              //sub title
+              const Text(
+                "Get your sneakers now",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+              const SizedBox(
+                height: 48,
+              ),
+
+              //start now button
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[900],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: const EdgeInsets.all(25),
+                child: Center(
+                  child: Text(
+                    "Shop Now",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
