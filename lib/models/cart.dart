@@ -50,10 +50,12 @@ class Cart extends ChangeNotifier {
   //add to cart
   void addToCart(Shoe shoe) {
     userCart.add(shoe);
+    notifyListeners();
   }
 
   //remove from cart
   void removeFromCart(Shoe shoe) {
     userCart.remove(shoe);
+    notifyListeners();
   }
 }
