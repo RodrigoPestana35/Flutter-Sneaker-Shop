@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:sneakershop/models/shoe.dart';
+import 'package:sneakershop/pages/shoe_tile.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -75,8 +77,17 @@ class _ShopPageState extends State<ShopPage> {
         ),
         Expanded(
           child: ListView.builder(
+            itemCount: 4,
+            scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return ShoeTile();
+              Shoe shoe = Shoe(
+                  name: "Nike Dunk Low NN",
+                  price: "240",
+                  image: "lib/images/NIKE+DUNK+LOW+NN.png",
+                  description: "Cool Shoes");
+              return ShoeTile(
+                shoe: shoe,
+              );
             },
           ),
         )
