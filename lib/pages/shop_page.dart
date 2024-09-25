@@ -90,7 +90,13 @@ class _ShopPageState extends State<ShopPage> {
               );
             },
           ),
-        )
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 25),
+          child: Divider(
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }
